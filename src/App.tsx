@@ -1,7 +1,10 @@
+import { RouterProvider } from "react-router-dom";
+import { publicRoutes } from "./routes";
+
 function App() {
   return (
     <>
-      <div className="">Ecomate</div>
+      <RouterProvider router={publicRoutes} />
     </>
   );
 }
