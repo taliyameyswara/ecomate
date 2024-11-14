@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Profile = () => {
   return (
@@ -51,9 +52,11 @@ const Profile = () => {
             </div>
 
             {/* Logout Button */}
-            <button className="w-full py-3 bg-primary  text-white font-semibold rounded-xl mt-4 mb-8">
-              Logout
-            </button>
+            <NavLink to="/login">
+              <button className="w-full py-3 bg-primary  text-white font-semibold rounded-xl mt-4 mb-8">
+                Logout
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

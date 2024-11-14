@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-const Filter = () => {
-  const [activeFilter, setActiveFilter] = useState("ALL");
+interface FilterProps {
+  filters: string[];
+}
 
-  const filters = ["ALL", "SAYURAN", "BUAH"];
+const Filter = ({ filters }: FilterProps) => {
+  const [activeFilter, setActiveFilter] = useState("ALL");
 
   return (
     <div className="flex space-x-4">

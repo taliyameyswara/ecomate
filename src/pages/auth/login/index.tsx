@@ -39,12 +39,11 @@ const Login = () => {
               Forgot password
             </a>
           </div>
-          <button
-            type="submit"
-            className="w-full py-2 bg-white text-[#155527] font-semibold rounded mt-4"
-          >
-            Sign In
-          </button>
+          <NavLink to={"/"}>
+            <button className="w-full py-2 bg-white text-[#155527] font-semibold rounded mt-4">
+              Sign In
+            </button>
+          </NavLink>
         </form>
         <div className="flex items-center justify-between my-6">
           <hr className="w-full border-gray-400" />

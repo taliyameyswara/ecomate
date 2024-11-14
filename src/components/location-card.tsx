@@ -1,6 +1,5 @@
 import React from "react";
-import { MapIcon, MapPinIcon } from "@heroicons/react/24/solid";
-import { StarIcon } from "@heroicons/react/24/solid";
+import { MapPinIcon, StarIcon } from "@heroicons/react/24/solid";
 
 interface LocationCardProps {
   title: string;
@@ -22,26 +21,30 @@ const LocationCard = ({
   distance,
 }: LocationCardProps) => {
   return (
-    <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white">
+    <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col h-full">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
-      <div className="p-5">
-        <div className="flex items-center mb-3">
-          {Array.from({ length: 5 }, (_, index) => (
-            <StarIcon
-              key={index}
-              className={`w-5 h-5 ${
-                index < rating ? "text-primary" : "text-gray-300"
-              }`}
-            />
-          ))}
+      <div className="p-5 flex flex-col flex-1">
+        <div className="">
+          <div className="flex items-center mb-2">
+            {Array.from({ length: 5 }, (_, index) => (
+              <StarIcon
+                key={index}
+                className={`w-5 h-5 ${
+                  index < rating ? "text-primary" : "text-gray-300"
+                }`}
+              />
+            ))}
+          </div>
+          <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
+          <div className="flex text-sm text-gray-600 mt-2">
+            <div>
+              <MapPinIcon className="text-primary mr-1 w-5 h-5" />
+            </div>
+            <p className="text-xs">{address}</p>
+          </div>
         </div>
-        <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
-        <div className="flex items-center text-sm text-gray-600">
-          <MapPinIcon className="w-16 h-20 text-primary mr-1" />
-          <p className="text-xs">{address}</p>
-        </div>
-        <div className="flex justify-between items-center gap-3">
-          <div className="flex items-center gap-3 text-gray-400 text-sm">
+        <div className="flex justify-between items-center gap-3 mt-auto">
+          <div className="flex items-center gap-3 text-gray-400 text-sm mt-2">
             <p className="font-medium">{distance}</p>
             <button
               onClick={() => window.open(link, "_blank")}
@@ -53,7 +56,7 @@ const LocationCard = ({
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="size-4"
+                className="w-5 h-5"
               >
                 <path
                   strokeLinecap="round"
