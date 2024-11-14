@@ -28,7 +28,7 @@ const Navbar = () => {
     },
     {
       name: "Announcement",
-      href: "#",
+      href: "/",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,9 @@ const Navbar = () => {
     <nav className="bg-white shadow fixed w-full">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <img src="logo1.png" alt="Ecomate Logo" className="w-32" />
+          <NavLink to="/">
+            <img src="logo1.png" alt="Ecomate Logo" className="w-32" />
+          </NavLink>
           {/* Navbar Links for Desktop */}
           <div className="hidden md:flex space-x-10">
             {navItems.map((item, index) => (
