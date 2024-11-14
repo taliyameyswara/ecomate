@@ -16,8 +16,8 @@ export const publicRoutes = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="/" element={<Home />} />
-      <Route path="/" element={<Login />} />
-      <Route path="/" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/cafe" element={<Cafe />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/shop" element={<Shop />} />
