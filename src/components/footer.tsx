@@ -1,63 +1,50 @@
 import React from "react";
+import { FaWhatsapp, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa"; // Importing social media icons
 
 const Footer = () => {
   return (
     <footer className="bg-white text-primary px-4 shadow">
-      <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Contact Section */}
+      <div className="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
+        {/* WhatsApp Community Link (left) */}
         <div>
-          <h2 className="text-lg font-semibold text-primary mb-3">
-            Contact Person
-          </h2>
-          <p>John Doe</p>
-          <p>Email: johndoe@example.com</p>
-          <p>Phone: +123 456 7890</p>
+          <a
+            href="https://chat.whatsapp.com/C70ArTg7WiV3e83XmQAdt6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-primary hover:underline"
+          >
+            <FaWhatsapp className="mr-2" /> Whatsapp Community
+          </a>
         </div>
 
-        {/* Social Media Section */}
-        <div>
-          <h2 className="text-lg font-semibold text-primary mb-3">Follow Us</h2>
-          <div className="flex space-x-4">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-primary"
-            >
-              Facebook
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-primary"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-primary"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-primary"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
+        <p className="text-gray-400">© 2024 Ecomate. All Rights Reserved.</p>
 
-        {/* Copyright Section */}
-        <div className="text-center md:text-right">
-          <p className="text-gray-400 mt-4 md:mt-0">
-            © 2024 Ecomate. All Rights Reserved.
-          </p>
+        {/* Social Media Links (right) */}
+        <div className="flex items-center space-x-4">
+          <a
+            href="https://x.com/eco_matee?t=Btn6AOCtSw5gX-Qvx4plsA&s=09"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            <FaTwitter size={20} />
+          </a>
+          <a
+            href="https://www.instagram.com/eco_mate_id?igsh=bTM4YmZ3ZXhncm5p"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            <FaInstagram size={20} />
+          </a>
+          <a
+            href="https://www.tiktok.com/@eco_matee?_t=8rNdAMn853g&_r=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            <FaTiktok size={20} />
+          </a>
         </div>
       </div>
     </footer>
